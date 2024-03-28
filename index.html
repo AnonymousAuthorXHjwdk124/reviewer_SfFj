@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="Coarse-To-Fine Tensor Trains for Compact and Robust Visual Representations">
+  <meta name="keywords" content="Coarse-To-Fine Tensor Trains for Compact and Robust Visual Representations">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Reviewer SfFj - Coarse-To-Fine Tensor Trains for Compact and Robust Visual Representations</title>
+
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="stylesheet" href="./static/css/before_after.css">
+  <link rel="icon" href="./static/images/BSicon_BAHN.svg">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://unpkg.com/imagesloaded@5/imagesloaded.pkgd.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="./static/css/magnify.css">
+  <link rel="stylesheet" href="twentytwenty/css/twentytwenty.css" type="text/css" media="screen" />
+
+  <!-- jQuery Script (choose one version) -->
+  <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+
+  <!-- jQuery-dependent Plugin Scripts -->
+  <script src="./static/js/jquery.magnify.js"></script>
+  <script src="twentytwenty/js/jquery.event.move.js"></script>
+  <script src="twentytwenty/js/jquery.twentytwenty.js"></script>
+
+  <!-- Custom Scripts -->
+  <script src="./static/js/custom.js"></script>
+
+</head>
+
+<body>
+
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title"><b>Coarse-To-Fine Tensor Trains for Compact and Robust Visual
+                Representations</b></h1>
+            <div class="is-size-5 publication-authors">
+            </div>
+
+            <div class="is-size-5 publication-authors">
+
+              <h2 class="title is-3">External Material for Reviewer SfFj</h2>
+              <!-- <span class="author-block"><sup></span> -->
+            </div>
+
+            <style>
+              .magnify>.magnify-lens {
+                width: 130px;
+                height: 130px;
+              }
+            </style>
+
+            <style>
+              /* Style the buttons */
+              .btn {
+                border: none;
+                outline: none;
+                padding: 10px 16px;
+                background-color: #f1f1f1;
+                cursor: pointer;
+                font-size: 18px;
+                border-radius: 8px;
+              }
+            </style>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <section style="margin-bottom: 50px;"> <!-- Add margin-bottom style to create space between Table of Contents and Image Section -->
+    <div class="container is-max-desktop">
+      <div class="table-of-contents">
+        <h3>Table of Contents</h3>
+        <ul>
+          <li><a href="#Images_section">Question 2: Performance on inpainting tasks.</a></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+  
+  <section id="Images_section" style="margin-top: 20px;"> <!-- Add margin-top style to create space between Table of Contents and Image Section -->
+    <div class="container is-max-desktop">
+      <h1 style="margin-bottom: 20px; font-weight: bold; font-size: 28px; ">Question 2: Performance on Inpainting Tasks.</h1> <!-- Add font-weight: bold; to make the headline bold -->
+      <div class="columns is-centered"> <!-- Center the columns -->
+        <!-- Top row with two images -->
+        <div class="image-container" style="margin-top: 20px;"> <!-- Add margin-top style to create space between title and images -->
+          <img src="static/images/impainting results.png" alt="Image 1">
+          <p>
+            The figure illustrates an inpainting experiment conducted on two distinct 512x512x3 images: one depicting bricks (top row) and the other, the renowned Lena image (bottom row). The first column displays the original ground truth images, while the second column shows these images with a continuous 10% mask applied, simulating a missing area. The third column presents the reconstruction achieved using our PuTT method. The top row highlights the method's proficiency in structured settings, as evidenced by the successful inpainting of the brick image. Conversely, the bottom row with the Lena image elucidates the challenges faced in inpainting extensive regions without sophisticated priors, relying solely on the inherent statistics of the image. Both reconstructions were obtained after 1024 iterations, using only samples from the unmasked regions of the respective images.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  
+
+  <section>
+    <div class="container is-max-desktop">
+      <!-- Your existing image sections here -->
+    </div>
+  </section>
+
+  <!-- Fullscreen image display -->
+  <div class="fullscreen-image" id="fullscreenImage">
+    <span class="close-btn" onclick="closeFullscreenImage()">×</span>
+    <img id="fullscreenImg" src="" alt="Fullscreen Image">
+  </div>
+
+  <!-- Your existing body content here -->
+
+  <script>
+    // JavaScript for toggling fullscreen image display
+    var fullscreenImg = document.getElementById("fullscreenImg");
+    var fullscreenImage = document.getElementById("fullscreenImage");
+
+    // Function to open fullscreen image
+    function openFullscreenImage(imgSrc) {
+      fullscreenImg.src = imgSrc;
+      fullscreenImage.style.display = "flex"; // Display the fullscreen image
+
+      // Add event listener to exit fullscreen when clicking outside the image
+      document.addEventListener("click", exitFullscreenOnClickOutside);
+    }
+
+    // Function to close fullscreen image
+    function closeFullscreenImage() {
+      fullscreenImage.style.display = "none"; // Hide the fullscreen image
+      // Remove event listener when closing fullscreen
+      document.removeEventListener("click", exitFullscreenOnClickOutside);
+    }
+
+    // Function to exit fullscreen when clicking outside the image
+    function exitFullscreenOnClickOutside(event) {
+      if (event.target === fullscreenImage) {
+        closeFullscreenImage();
+      }
+    }
+
+    // Add click event listeners to all images to open in fullscreen
+    var images = document.querySelectorAll(".image-container img");
+    images.forEach(function (img) {
+      img.addEventListener("click", function () {
+        openFullscreenImage(this.src);
+      });
+    });
+  </script>
+
+
+  <footer class="footer">
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column is-8">
+          <div class="content">
+            <p>
+              This website is licensed under a <a rel="license"
+                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+                Commons Attribution-ShareAlike 4.0 International License</a>.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+
+</html>
